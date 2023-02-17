@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.example.testingfragmentsinisolation.R
+import com.example.testingfragmentsinisolation.data.source.MoviesRemoteDataSource
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -19,15 +23,14 @@ private const val ARG_PARAM2 = "param2"
  */
 class MovieDetailFragment : Fragment(){
 
+    private lateinit var movie_description:TextView
+    private lateinit var movie_directiors: TextView
+    private lateinit var movie_image: ImageView
+    private lateinit var movie_title: TextView
+    private lateinit var movie_star_actors:TextView
     private lateinit var movie: Movie
-
-    /**
-     * In production the MoviesRemoteDataSource would be either:
-     * 1) Be injected with a DI framework like dagger
-     * 2) Be passed as a constructor param to the Fragment (if using FragmentFactory)
-     * This is a simple use case so I'm just writing it here.
-     */
-    override fun onCreate(savedInstanceState: Bundle?) {
+    lateinit var MoviesRemoteDataSource: MoviesRemoteDataSource
+            override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let { args ->
             args.getInt("movie_id").let{ movieId ->
@@ -43,7 +46,13 @@ class MovieDetailFragment : Fragment(){
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_movie_detail, container, false)
+        val view = inflater.inflate(R.layout.fragment_movie_detail, container, false)
+        movie_description = view.findViewById(R.id.movie_description)
+        movie_directiors = view.findViewById(R.id.movie_directiors)
+        movie_image = view.findViewById(R.id.movie_image)
+        movie_title = view.findViewById(R.id.movie_title)
+        movie_star_actors = view.findViewById(R.id.movie_star_actors)
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -72,7 +81,7 @@ class MovieDetailFragment : Fragment(){
 
     private fun setMovieDetails(){
         movie.let{ nonNullMovie ->
-            Glide.with(this)
+            Glide.with(requireContext())
                 .load(nonNullMovie.image)
                 .into(movie_image)
             movie_title.text = nonNullMovie.title
