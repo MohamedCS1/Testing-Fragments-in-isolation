@@ -29,7 +29,6 @@ class MovieDetailFragment : Fragment(){
     private lateinit var movie_title: TextView
     private lateinit var movie_star_actors:TextView
     private lateinit var movie: Movie
-    lateinit var MoviesRemoteDataSource: MoviesRemoteDataSource
             override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let { args ->
