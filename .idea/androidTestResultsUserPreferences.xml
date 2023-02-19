@@ -10,6 +10,7 @@
                 <map>
                   <entry key="Duration" value="90" />
                   <entry key="IRVW99IVGUS86S8T" value="120" />
+                  <entry key="SPA Condor Electronics&#10; Plume P8 Pro" value="120" />
                   <entry key="Tests" value="360" />
                 </map>
               </option>
@@ -31,6 +32,19 @@
             </AndroidTestResultsTableState>
           </value>
         </entry>
+        <entry key="17050633">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="IRVW99IVGUS86S8T" value="120" />
+                  <entry key="Tests" value="360" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
         <entry key="809085314">
           <value>
             <AndroidTestResultsTableState>
@@ -39,6 +53,20 @@
                   <entry key="Duration" value="90" />
                   <entry key="IRVW99IVGUS86S8T" value="120" />
                   <entry key="Pixel_2_API_30" value="120" />
+                  <entry key="SPA Condor Electronics&#10; Plume P8 Pro" value="120" />
+                  <entry key="Tests" value="360" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
+        <entry key="1950156465">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="IRVW99IVGUS86S8T" value="120" />
                   <entry key="SPA Condor Electronics&#10; Plume P8 Pro" value="120" />
                   <entry key="Tests" value="360" />
                 </map>
