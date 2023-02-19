@@ -8,16 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.example.testingfragmentsinisolation.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [DirectorsFragment.newInstance] factory method to
- * create an instance of this fragment.
- */class DirectorsFragment : Fragment(){
+internal class DirectorsFragment : Fragment(){
 
     private val directors: ArrayList<String> = ArrayList()
     private lateinit var directors_text:TextView

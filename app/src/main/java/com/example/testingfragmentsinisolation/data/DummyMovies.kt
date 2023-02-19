@@ -7,7 +7,7 @@ object DummyMovies {
     val INFINITY_WAR = Movie(
         0,
         "Avengers: Infinity War",
-        "https://nyc3.digitaloceanspaces.com/open-api-spaces/open-api-static/blog/1/Infinity_War-infinity_war.png",
+        "https://s3-us-west-2.amazonaws.com/prd-rteditorial/wp-content/uploads/2018/03/13153742/RT_300EssentialMovies_700X250.jpg",
         "The Avengers and their allies must be willing to sacrifice all in an attempt to " +
                 "defeat the powerful Thanos before his blitz of devastation and ruin puts an end to " +
                 "the universe.",
